@@ -15,10 +15,8 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/homepage.html'));
 })
 
-// Sets up the server for the application to run on
-  var server = app.listen(8080, function() {
-  var host = server.address().address
-  var port = server.address().port
-
-  console.log("Example app listening at http://%s:%s", host, port)
-})
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+  console.log('Press Ctrl+C to quit.');
+});
