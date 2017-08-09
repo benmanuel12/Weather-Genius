@@ -16,7 +16,7 @@ app.get('/', function(req, res) {
 })
 
 // Sets up the server for the application to run on
-  var server = app.listen(8083, function() {
+  var server = app.listen(8080, function() {
   var host = server.address().address
   var port = server.address().port
 
